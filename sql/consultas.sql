@@ -12,4 +12,9 @@ SELECT * FROM public.asma_dim;
 
 SELECT * FROM public.localidad_dim;
 
-SELECT * FROM public.vivienda_dim;
+SELECT COUNT(*) 
+FROM public.vivienda_dim;
+
+
+SELECT COUNT(*) 
+FROM public.hacinamiento_fact;

@@ -41,16 +41,16 @@ CREATE TABLE public.vivienda_dim
 CREATE TABLE public.hacinamiento_fact 
 (
 	id SERIAL PRIMARY KEY,
-	hacinamiento FLOAT NOT NULL,
 	cantidad_personas INT NOT NULL,
 	cantidad_cuartos INT NOT NULL,
+	hacinamiento FLOAT NOT NULL,
 	cantidad_asma INT NOT NULL,
 	porcentaje_luz_natural FLOAT NOT NULL,
 	
-	id_asma INT REFERENCES asma_dim (id_asma),
 	id_year INT REFERENCES year_dim (id_year),
+	id_asma INT REFERENCES asma_dim (id_asma),
 	id_localidad INT REFERENCES localidad_dim (id_localidad),
-	id_vivienda INT REFERENCES vivienda_dim (id_vivienda)
+	id_casa INT REFERENCES vivienda_dim (id_casa)
 
 );
 
