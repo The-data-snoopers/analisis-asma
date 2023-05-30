@@ -55,6 +55,15 @@ CREATE TABLE public.hacinamiento_fact
 );
 
 
+CREATE TABLE public.humedad_dim 
+(
+	id SERIAL PRIMARY KEY,
+	humedad INT UNIQUE NOT NULL,
+	id_humedad INT UNIQUE NOT NULL
+);
+
+
+DROP TABLE public.humedad_dim
 
 
 

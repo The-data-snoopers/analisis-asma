@@ -47,21 +47,13 @@ conn = psycopg2.connect(
 def insertar_data(lista) -> int:
 
     try: 
-        # Crear un cursor
         cursor = conn.cursor()
-
         for value in lista:
             print(value.localidad)
-            
-            # Ejecutar una inserción
             insert_query = "INSERT INTO public.localidad_dim(localidad, id_localidad) VALUES (%s, %s)"
             data = (value.localidad, value.id_localidad)
             cursor.execute(insert_query, data)
-
-        # Confirmar la transacción
         conn.commit()
-
-        # Cerrar el cursor y la conexión
         cursor.close()
         conn.close()
         return 0

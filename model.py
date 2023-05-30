@@ -23,4 +23,5 @@ class Hacinamiento(NamedTuple):
     id_asma: Optional[int] = None
     id_localidad: Optional[int] = None
     id_casa: Optional[int] = None
+    id_humedad: Optional[int] = None
     
